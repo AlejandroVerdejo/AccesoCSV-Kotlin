@@ -24,7 +24,7 @@ fun main()
         var nombre = i.split(":").first()
         //Separamos por el divisor del archivo para sacar las notas del alumno
         var notas = i.split(":").drop(1)
-        //Pasamos las notas a Double
+        //Pasamos las notas a Double, el ?: 0.0 valdra para asignarle ese valor por defecto si el Double fuese null
         var notasDouble = notas.map { it.toDoubleOrNull() ?: 0.0 }
         //Utilizamos el metodo para sacar la media enviando la suma de las notas y la cantidad de notas
         //El metodo reduce se encarga de sumar todos los elementos de la lista de double
