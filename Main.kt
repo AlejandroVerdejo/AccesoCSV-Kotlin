@@ -28,7 +28,7 @@ fun main()
         var notasDouble = notas.map { it.toDoubleOrNull() ?: 0.0 }
         //Utilizamos el metodo para sacar la media enviando la suma de las notas y la cantidad de notas
         //El metodo reduce se encarga de sumar todos los elementos de la lista de double
-        var media = media(notasDouble.reduce { acumulado, elemento -> acumulado + elemento },notasDouble.size)
+        var media = media(notasDouble.reduce { total, nota -> total + nota },notasDouble.size)
         //Añadimos el nombre y la nota media a la lista
         medias.put(nombre,media)   
     }
